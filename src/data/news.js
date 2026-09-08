@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 /**
  * News & events feed.
  * NOTE: sample placeholder entries and generated poster images — replace
@@ -16,7 +18,7 @@ export const NEWS_ITEMS = [
       'An engaging workshop for our employees — activities to enhance interpersonal skills, encourage open dialogue and refine communication across the team.',
     images: [
       {
-        src: '/news/communication-workshop-2023-1.jpg',
+        src: asset('/news/communication-workshop-2023-1.jpg'),
         alt: 'Raster Images employees gathered for a group photo at the Communication Workshop 2023',
       },
     ],
@@ -35,7 +37,7 @@ export const NEWS_ITEMS = [
       'Three days of talks and presentations on the DICOM standard — from the basics to DICOMweb™ — overseen by the people behind the standard along with local partners.',
     images: [
       {
-        src: '/news/dicom-educational-conference-2023-1.jpg',
+        src: asset('/news/dicom-educational-conference-2023-1.jpg'),
         alt: 'Speakers and delegates of the DICOM Educational Conference 2023 gathered on stage for a group photo',
       },
     ],
@@ -69,7 +71,7 @@ export const NEWS_ITEMS = [
       'The 4th International Healthcare Technology Conference of the Consortium of Accredited Healthcare Organisations, conducted on 27th and 28th September 2019 at Chennai.',
     images: [
       {
-        src: '/news/cahotech-2019-1.jpg',
+        src: asset('/news/cahotech-2019-1.jpg'),
         alt: 'Speaker addressing the audience from the podium on the CAHOTECH 2019 conference stage',
       },
     ],
@@ -88,7 +90,7 @@ export const NEWS_ITEMS = [
       'CII Salem organised the First Edition of the “Healthcare Conference” at Radisson Hotel — a strategic platform for healthcare stakeholders from across the region.',
     images: [
       {
-        src: '/news/healthcare-conference-2019-1.jpg',
+        src: asset('/news/healthcare-conference-2019-1.jpg'),
         alt: 'Memento presentation on stage at the CII Healthcare Conference 2019, Confederation of Indian Industry',
       },
     ],
@@ -105,9 +107,9 @@ export const NEWS_ITEMS = [
     excerpt:
       'Standards-compliant unit labels complete the donor-to-transfusion traceability chain.',
     images: [
-      { src: '/news/blood-bank-isbt-1.svg', alt: 'Blood unit bag with an ISBT 128 barcode label and transfusion line' },
-      { src: '/news/blood-bank-isbt-2.svg', alt: 'ISBT 128 unit label with barcode, data matrix and blood group details' },
-      { src: '/news/blood-bank-isbt-3.svg', alt: 'Traceability chain from donor through testing and storage to issue' },
+      { src: asset('/news/blood-bank-isbt-1.svg'), alt: 'Blood unit bag with an ISBT 128 barcode label and transfusion line' },
+      { src: asset('/news/blood-bank-isbt-2.svg'), alt: 'ISBT 128 unit label with barcode, data matrix and blood group details' },
+      { src: asset('/news/blood-bank-isbt-3.svg'), alt: 'Traceability chain from donor through testing and storage to issue' },
     ],
     body: [
       'Blood Bank Management now prints ISBT 128 unit labels — the international standard for the identification, labelling and information transfer of blood and blood products.',

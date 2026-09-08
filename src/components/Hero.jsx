@@ -1,3 +1,4 @@
+import { asset } from '../lib/asset'
 import { ScrollTrigger } from '../lib/motion'
 
 const Arrow = () => (
@@ -51,7 +52,7 @@ export default function Hero({ onRequestDemo }) {
           <div className="hero__bag-wrap" data-tube-anchor>
             <img
               className="hero__bag"
-              src="/blood-bag.png"
+              src={asset('/blood-bag.png')}
               alt="O-negative blood bag connected to a transfusion line"
               width="428"
               height="800"

@@ -1,3 +1,4 @@
+import { asset } from '../lib/asset'
 import { Link } from 'react-router-dom'
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
           <div className="footer__brand">
             <img
               className="footer__logo-img"
-              src="/logo-white.webp"
+              src={asset('/logo-white.webp')}
               alt="Raster Images"
               width="229"
               height="27"

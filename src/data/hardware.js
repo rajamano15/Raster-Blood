@@ -1,3 +1,5 @@
+import { asset } from '../lib/asset'
+
 /**
  * Hardware catalogue. Product images live in public/hardware/ and are
  * sourced from https://www.raster.in/hardware-products.php — an item
@@ -11,9 +13,9 @@ export const HARDWARE_GROUPS = [
     blurb:
       'Broadcast-grade acquisition for operating theatres, studios and film digitisation.',
     items: [
-      { label: 'Professional Cameras', img: '/hardware/professional-cameras.jpg' },
-      { label: 'Capture and Playback', img: '/hardware/capture-playback.jpg' },
-      { label: 'Cintel Scanner', img: '/hardware/cintel-scanner.jpg' },
+      { label: 'Professional Cameras', img: asset('/hardware/professional-cameras.jpg') },
+      { label: 'Capture and Playback', img: asset('/hardware/capture-playback.jpg') },
+      { label: 'Cintel Scanner', img: asset('/hardware/cintel-scanner.jpg') },
     ],
   },
   {
@@ -23,8 +25,8 @@ export const HARDWARE_GROUPS = [
     blurb:
       'Edit, grade, composite and archive — the complete finishing pipeline.',
     items: [
-      { label: 'DaVinci Resolve and Fusion Software', img: '/hardware/davinci-resolve-fusion.png' },
-      { label: 'Duplication, Disk Recorders and Storage', img: '/hardware/duplication-disk-recorders-storage.png' },
+      { label: 'DaVinci Resolve and Fusion Software', img: asset('/hardware/davinci-resolve-fusion.png') },
+      { label: 'Duplication, Disk Recorders and Storage', img: asset('/hardware/duplication-disk-recorders-storage.png') },
     ],
   },
   {
@@ -34,9 +36,9 @@ export const HARDWARE_GROUPS = [
     blurb:
       'Multi-camera switching, keying and monitoring for live surgery and events.',
     items: [
-      { label: 'ATEM Live Production Switchers', img: '/hardware/atem-switchers.jpg' },
-      { label: 'Ultimatte', img: '/hardware/ultimatte.jpg' },
-      { label: 'MultiView', img: '/hardware/multiview.jpg' },
+      { label: 'ATEM Live Production Switchers', img: asset('/hardware/atem-switchers.jpg') },
+      { label: 'Ultimatte', img: asset('/hardware/ultimatte.jpg') },
+      { label: 'MultiView', img: asset('/hardware/multiview.jpg') },
     ],
   },
   {
@@ -46,9 +48,9 @@ export const HARDWARE_GROUPS = [
     blurb:
       'Move any signal anywhere — routed, converted and standards-matched.',
     items: [
-      { label: 'Routing and Distribution', img: '/hardware/routing-distribution.jpg' },
-      { label: 'Broadcast Converters', img: '/hardware/broadcast-converters.png' },
-      { label: 'Standards Conversion', img: '/hardware/standards-conversion.jpg' },
+      { label: 'Routing and Distribution', img: asset('/hardware/routing-distribution.jpg') },
+      { label: 'Broadcast Converters', img: asset('/hardware/broadcast-converters.png') },
+      { label: 'Standards Conversion', img: asset('/hardware/standards-conversion.jpg') },
     ],
   },
   {
@@ -58,8 +60,8 @@ export const HARDWARE_GROUPS = [
     blurb:
       'Confidence monitoring and measurement across the whole signal chain.',
     items: [
-      { label: 'Video and Audio Monitoring', img: '/hardware/video-audio-monitoring.png' },
-      { label: 'Test Equipment', img: '/hardware/test-equipment.jpg' },
+      { label: 'Video and Audio Monitoring', img: asset('/hardware/video-audio-monitoring.png') },
+      { label: 'Test Equipment', img: asset('/hardware/test-equipment.jpg') },
     ],
   },
   {
@@ -69,10 +71,10 @@ export const HARDWARE_GROUPS = [
     blurb:
       'Encode, stream, store and connect — the room behind the room.',
     items: [
-      { label: 'Streaming and Encoding', img: '/hardware/streaming-encoding.jpg' },
+      { label: 'Streaming and Encoding', img: asset('/hardware/streaming-encoding.jpg') },
       { label: 'Servers' },
-      { label: 'Accessories', img: '/hardware/accessories.jpg' },
-      { label: 'Cables & Adapters', img: '/hardware/cables-adapters.jpg' },
+      { label: 'Accessories', img: asset('/hardware/accessories.jpg') },
+      { label: 'Cables & Adapters', img: asset('/hardware/cables-adapters.jpg') },
     ],
   },
 ]

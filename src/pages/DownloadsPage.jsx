@@ -1,3 +1,4 @@
+import { asset } from '../lib/asset'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useReveals } from '../lib/useReveals'
@@ -7,10 +8,10 @@ import { Arrow } from '../components/icons'
 /** Brochure PDFs live in public/downloads/brochure/, mirrored from
     https://www.raster.in/downloads.php */
 const BROCHURES = [
-  ['PACS', 'Picture Archiving and Communication', '/downloads/brochure/raster-ipacs.pdf', '154 KB'],
-  ['OTVB', 'Operation Theater Video Broadcasting', '/downloads/brochure/raster-otvb.pdf', '211 KB'],
-  ['IoMT & Interfacing', 'Internet of Medical Things & Interfacing', '/downloads/brochure/raster-iomt.pdf', '331 KB'],
-  ['DICOM Burner', 'CD/DVD DICOM Burner', '/downloads/brochure/raster-dicom-burner.pdf', '156 KB'],
+  ['PACS', 'Picture Archiving and Communication', asset('/downloads/brochure/raster-ipacs.pdf'), '154 KB'],
+  ['OTVB', 'Operation Theater Video Broadcasting', asset('/downloads/brochure/raster-otvb.pdf'), '211 KB'],
+  ['IoMT & Interfacing', 'Internet of Medical Things & Interfacing', asset('/downloads/brochure/raster-iomt.pdf'), '331 KB'],
+  ['DICOM Burner', 'CD/DVD DICOM Burner', asset('/downloads/brochure/raster-dicom-burner.pdf'), '156 KB'],
 ]
 
 const PRODUCTS = [

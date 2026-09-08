@@ -1,3 +1,4 @@
+import { asset } from '../lib/asset'
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
@@ -59,7 +60,7 @@ export default function Navbar({ onRequestDemo }) {
             <Link className="nav__brand" to="/" aria-label="Raster Images — home">
               <img
                 className="nav__logo-img"
-                src="/logo-green.webp"
+                src={asset('/logo-green.webp')}
                 alt=""
                 width="258"
                 height="30"
