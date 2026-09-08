@@ -6,6 +6,12 @@ gsap.registerPlugin(ScrollTrigger)
 // avoid jumpy refreshes from mobile address-bar show/hide
 ScrollTrigger.config({ ignoreMobileResize: true })
 
+// Scroll-driven scrubs must track real elapsed time. GSAP's default lag
+// smoothing (500ms/33ms) pretends only 33ms passed whenever a frame takes
+// longer than 500ms, which on slow GPUs lets the scrubbed blood fill fall
+// hundreds of pixels behind the viewport and never catch up.
+gsap.ticker.lagSmoothing(0)
+
 export { gsap, ScrollTrigger }
 
 export const prefersReduced = () =>

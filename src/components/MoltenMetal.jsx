@@ -155,7 +155,9 @@ const MoltenMetal = ({
       alpha: true,
       premultipliedAlpha: true,
       antialias: false,
-      dpr: Math.min(window.devicePixelRatio || 1, 2)
+      // Full-viewport background: render at 1x regardless of devicePixelRatio
+      // (the shader is soft and blurred anyway, and 2x quadruples the GPU cost)
+      dpr: 1
     });
 
     const gl = renderer.gl;

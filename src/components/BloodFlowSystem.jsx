@@ -28,6 +28,14 @@ export default function BloodFlowSystem({ pageRef }) {
   useLayoutEffect(() => {
     const svg = svgRef.current
     const tip = tipRef.current
+    // The page wrapper's ref is attached by React *after* this child's
+    // layout effect runs, so pageRef.current is still null here. Resolve
+    // the wrapper from the DOM instead — passing null as the ScrollTrigger
+    // trigger made GSAP scrub over the whole document (newsletter + footer
+    // included) while the fill mapping used the shorter page span, so the
+    // blood fell progressively behind the viewport further down the page.
+    const getPage = () => pageRef?.current || svg?.closest('.page') || null
+    let master = null
     const layers = layersRef.current
     const allPaths = Object.values(layers).filter(Boolean)
     const dashPaths = [layers.glow, layers.under, layers.core, layers.bright, layers.gloss]
@@ -107,8 +115,13 @@ export default function BloodFlowSystem({ pageRef }) {
       // trigger scrubs over. The document is taller (newsletter + footer
       // live outside .page), and mapping against it made the tip run
       // ahead of the viewport and vanish mid-page.
-      const span = pageRef?.current ? pageRef.current.scrollHeight : document.documentElement.scrollHeight
-      const target = vh * 0.66 + p * (span - vh)
+      const page = getPage()
+      const span = page ? page.scrollHeight : document.documentElement.scrollHeight
+      // Prefer the master trigger's own measured scroll distance so the
+      // mapping can never disagree with what GSAP is actually scrubbing.
+      const st = master?.scrollTrigger
+      const dist = st && st.end > st.start ? st.end - st.start : span - vh
+      const target = vh * 0.66 + p * dist
       let s = lengthAtDocY(sample, target)
       // guarantee a full line at the very bottom of the page
       const tail = Math.min(Math.max((p - 0.94) / 0.06, 0), 1)
@@ -145,7 +158,7 @@ export default function BloodFlowSystem({ pageRef }) {
     }
 
     const rebuild = () => {
-      const page = pageRef?.current
+      const page = getPage()
       if (!page || !svg) return
       const docH = Math.ceil(page.scrollHeight)
       const w = Math.ceil(page.clientWidth)
@@ -177,12 +190,12 @@ export default function BloodFlowSystem({ pageRef }) {
 
     const ctx = gsap.context(() => {
       if (!reduced) {
-        gsap.to(state, {
+        master = gsap.to(state, {
           p: 1,
           ease: 'none',
           onUpdate: apply,
           scrollTrigger: {
-            trigger: pageRef?.current,
+            trigger: getPage(),
             start: 'top top',
             end: 'bottom bottom',
             scrub: 1.2,
@@ -203,10 +216,11 @@ export default function BloodFlowSystem({ pageRef }) {
 
     // Re-measure whenever the page's height changes without a window resize —
     // FAQ accordions opening, late images, font swaps.
-    let lastH = pageRef?.current ? Math.ceil(pageRef.current.scrollHeight) : 0
+    const pageEl = getPage()
+    let lastH = pageEl ? Math.ceil(pageEl.scrollHeight) : 0
     let roTimer = 0
     const ro = new ResizeObserver(() => {
-      const page = pageRef?.current
+      const page = getPage()
       if (!page) return
       const h = Math.ceil(page.scrollHeight)
       if (Math.abs(h - lastH) < 2) return
@@ -214,7 +228,7 @@ export default function BloodFlowSystem({ pageRef }) {
       clearTimeout(roTimer)
       roTimer = setTimeout(() => ScrollTrigger.refresh(), 160)
     })
-    if (pageRef?.current) ro.observe(pageRef.current)
+    if (pageEl) ro.observe(pageEl)
 
     return () => {
       cancelAnimationFrame(raf)
