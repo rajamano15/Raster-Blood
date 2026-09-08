@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="38%" r="72%">
+      <stop offset="0%" stop-color="rgba(0,168,123,0.14)"/>
+      <stop offset="100%" stop-color="rgba(0,168,123,0)"/>
+    </radialGradient>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.05)"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="#0a0e0f"/>
+  <rect width="800" height="500" fill="url(#glow)"/>
+  <rect width="800" height="500" fill="url(#dots)"/>
+  <rect x="14" y="14" width="772" height="472" fill="none" stroke="rgba(255,255,255,0.14)"/>
+
+  <rect x="210" y="104" width="380" height="272" rx="8" fill="#f4f4f0"/>
+  <rect x="238" y="130" width="4.4" height="52" fill="#15181a"/>
+<rect x="246.6" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="255.2" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="263.8" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="272.4" y="130" width="4.4" height="52" fill="#15181a"/>
+<rect x="281" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="289.6" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="298.2" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="306.8" y="130" width="4.4" height="52" fill="#15181a"/>
+<rect x="315.4" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="324" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="332.6" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="341.2" y="130" width="4.4" height="52" fill="#15181a"/>
+<rect x="349.8" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="358.4" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="367" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="375.6" y="130" width="4.4" height="52" fill="#15181a"/>
+<rect x="384.2" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="392.79999999999995" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="401.4" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="410" y="130" width="4.4" height="52" fill="#15181a"/>
+<rect x="418.6" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="427.2" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="435.79999999999995" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="444.4" y="130" width="4.4" height="52" fill="#15181a"/>
+<rect x="453" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="461.6" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="470.2" y="130" width="2" height="52" fill="#15181a"/>
+<rect x="478.79999999999995" y="130" width="4.4" height="52" fill="#15181a"/>
+<rect x="487.4" y="130" width="2" height="52" fill="#15181a"/>
+  <text x="238" y="212" font-family="Menlo, monospace" font-size="14" fill="#15181a">W0426 26 123456</text>
+  <rect x="238" y="238" width="92" height="92" fill="none" stroke="#15181a" stroke-width="2"/>
+  
+<rect x="260" y="244" width="10" height="10" fill="#15181a"/>
+<rect x="276" y="244" width="10" height="10" fill="#15181a"/>
+
+<rect x="308" y="244" width="10" height="10" fill="#15181a"/>
+<rect x="244" y="260" width="10" height="10" fill="#15181a"/>
+
+<rect x="276" y="260" width="10" height="10" fill="#15181a"/>
+<rect x="292" y="260" width="10" height="10" fill="#15181a"/>
+
+<rect x="244" y="276" width="10" height="10" fill="#15181a"/>
+<rect x="260" y="276" width="10" height="10" fill="#15181a"/>
+
+<rect x="292" y="276" width="10" height="10" fill="#15181a"/>
+<rect x="308" y="276" width="10" height="10" fill="#15181a"/>
+
+<rect x="260" y="292" width="10" height="10" fill="#15181a"/>
+<rect x="276" y="292" width="10" height="10" fill="#15181a"/>
+
+<rect x="308" y="292" width="10" height="10" fill="#15181a"/>
+<rect x="244" y="308" width="10" height="10" fill="#15181a"/>
+
+<rect x="276" y="308" width="10" height="10" fill="#15181a"/>
+<rect x="292" y="308" width="10" height="10" fill="#15181a"/>
+
+  <text x="356" y="266" font-family="Menlo, monospace" font-size="13" fill="#b01116">O RhD NEGATIVE</text>
+  <text x="356" y="292" font-family="Menlo, monospace" font-size="11" fill="#15181a">CPDA-1 · 450 ML</text>
+  <text x="356" y="318" font-family="Menlo, monospace" font-size="11" fill="#15181a">EXP 2026-10-14</text>
+<text x="34" y="466" font-family="Menlo, Consolas, monospace" font-size="12" letter-spacing="3" fill="#1cc795">ISBT 128 · UNIT LABEL</text>
+  <text x="766" y="466" font-family="Menlo, Consolas, monospace" font-size="11" letter-spacing="2" fill="rgba(255,255,255,0.38)" text-anchor="end">IMG 02/03</text>
+</svg>

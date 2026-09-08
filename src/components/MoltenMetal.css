@@ -1,0 +1,14 @@
+.molten-metal-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Site background layer: fixed behind all content, composited over the body gradient */
+.site-molten {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
